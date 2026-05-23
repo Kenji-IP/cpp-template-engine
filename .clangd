@@ -1,0 +1,20 @@
+CompileFlags:
+    Add: [-std=c++23]
+    CompilationDatabase: clangd
+
+Diagnostics:
+  ClangTidy:
+    Add: [
+      bugprone-*,
+      performance-*,
+      modernize-*
+    ]
+    Remove: [
+      modernize-use-trailing-return-type
+    ]
+
+Completion:
+    HeaderInsertion: Never
+
+Index:
+    Background: Build
