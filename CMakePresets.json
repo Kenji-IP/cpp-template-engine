@@ -16,7 +16,36 @@
             }
         },
         {
+            "name": "Clang",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        },
+        {
+            "name": "GCC",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++"
+            }
+        },
+        {
+            "name": "MSVC-x64",
+            "hidden": true,
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl",
+                "CMAKE_CXX_COMPILER": "cl"
+            }
+        },
+        {
             "name": "Debug",
+            "hidden": true,
             "inherits": "Base",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
@@ -24,6 +53,7 @@
         },
         {
             "name": "Release",
+            "hidden": true,
             "inherits": "Base",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
@@ -31,24 +61,85 @@
         },
         {
             "name": "Dist",
+            "hidden": true,
             "inherits": "Base",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Dist"
             }
+        },
+        {
+            "name": "Clang-Debug",
+            "inherits": ["Clang", "Debug"]
+        },
+        {
+            "name": "Clang-Release",
+            "inherits": ["Clang", "Release"]
+        },
+        {
+            "name": "Clang-Dist",
+            "inherits": ["Clang", "Dist"]
+        },
+        {
+            "name": "GCC-Debug",
+            "inherits": ["GCC", "Debug"]
+        },
+        {
+            "name": "GCC-Release",
+            "inherits": ["GCC", "Release"]
+        },
+        {
+            "name": "GCC-Dist",
+            "inherits": ["GCC", "Dist"]
+        },
+        {
+            "name": "MSVC-x64-Debug",
+            "inherits": ["MSVC-x64", "Debug"]
+        },
+        {
+            "name": "MSVC-x64-Release",
+            "inherits": ["MSVC-x64", "Release"]
+        },
+        {
+            "name": "MSVC-x64-Dist",
+            "inherits": ["MSVC-x64", "Dist"]
         }
     ],
     "buildPresets": [
         {
-            "name": "Debug",
-            "configurePreset": "Debug"
+            "name": "Clang-Debug",
+            "configurePreset": "Clang-Debug"
         },
         {
-            "name": "Release",
-            "configurePreset": "Release"
+            "name": "Clang-Release",
+            "configurePreset": "Clang-Release"
         },
         {
-            "name": "Dist",
-            "configurePreset": "Dist"
+            "name": "Clang-Dist",
+            "configurePreset": "Clang-Dist"
+        },
+        {
+            "name": "GCC-Debug",
+            "configurePreset": "GCC-Debug"
+        },
+        {
+            "name": "GCC-Release",
+            "configurePreset": "GCC-Release"
+        },
+        {
+            "name": "GCC-Dist",
+            "configurePreset": "GCC-Dist"
+        },
+        {
+            "name": "MSVC-x64-Debug",
+            "configurePreset": "MSVC-x64-Debug"
+        },
+        {
+            "name": "MSVC-x64-Release",
+            "configurePreset": "MSVC-x64-Release"
+        },
+        {
+            "name": "MSVC-x64-Dist",
+            "configurePreset": "MSVC-x64-Dist"
         }
     ]
 }

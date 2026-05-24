@@ -1,8 +1,7 @@
-#include <iostream>
-#include <Engine/Utils/Types.h>
+#include <Engine/Debug/Assert.h>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    ENGINE_ASSERT(5 == 2, "Hello World!");
     return 0;
 }
