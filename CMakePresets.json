@@ -32,12 +32,8 @@
             }
         },
         {
-            "name": "MSVC-x64",
+            "name": "MSVC",
             "hidden": true,
-            "architecture": {
-                "value": "x64",
-                "strategy": "external"
-            },
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "cl",
                 "CMAKE_CXX_COMPILER": "cl"
@@ -92,16 +88,16 @@
             "inherits": ["GCC", "Dist"]
         },
         {
-            "name": "MSVC-x64-Debug",
-            "inherits": ["MSVC-x64", "Debug"]
+            "name": "MSVC-Debug",
+            "inherits": ["MSVC", "Debug"]
         },
         {
-            "name": "MSVC-x64-Release",
-            "inherits": ["MSVC-x64", "Release"]
+            "name": "MSVC-Release",
+            "inherits": ["MSVC", "Release"]
         },
         {
-            "name": "MSVC-x64-Dist",
-            "inherits": ["MSVC-x64", "Dist"]
+            "name": "MSVC-Dist",
+            "inherits": ["MSVC", "Dist"]
         }
     ],
     "buildPresets": [
@@ -130,16 +126,16 @@
             "configurePreset": "GCC-Dist"
         },
         {
-            "name": "MSVC-x64-Debug",
-            "configurePreset": "MSVC-x64-Debug"
+            "name": "MSVC-Debug",
+            "configurePreset": "MSVC-Debug"
         },
         {
-            "name": "MSVC-x64-Release",
-            "configurePreset": "MSVC-x64-Release"
+            "name": "MSVC-Release",
+            "configurePreset": "MSVC-Release"
         },
         {
-            "name": "MSVC-x64-Dist",
-            "configurePreset": "MSVC-x64-Dist"
+            "name": "MSVC-Dist",
+            "configurePreset": "MSVC-Dist"
         }
     ]
 }
