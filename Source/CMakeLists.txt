@@ -9,7 +9,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/)
 target_compile_definitions(${PROJECT_NAME} PRIVATE ENGINE_DLL_EXPORT)
 
 if (WIN32)
-    target_compile_definitions(${PROJECT_NAME} PRIVATE ENGINE_PLATFORM_WINDOWS)
+    target_compile_definitions(${PROJECT_NAME} PUBLIC ENGINE_PLATFORM_WINDOWS)
 endif()
 
 target_compile_definitions(${PROJECT_NAME}
