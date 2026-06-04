@@ -14,9 +14,9 @@ namespace Windows::IO
 {
     void ConsoleOut(const void* buffer, usize size) noexcept
     {
-        static HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+        static HANDLE handle = ::GetStdHandle(STD_OUTPUT_HANDLE);
         DWORD written;
-        WriteFile(handle, buffer, static_cast<DWORD>(size), &written, nullptr);
+        ::WriteFile(handle, buffer, static_cast<DWORD>(size), &written, nullptr);
     }
 }
 

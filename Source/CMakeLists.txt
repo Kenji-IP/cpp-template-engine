@@ -12,6 +12,10 @@ if (WIN32)
     target_compile_definitions(${PROJECT_NAME} PUBLIC ENGINE_PLATFORM_WINDOWS)
 endif()
 
+if (LINUX)
+    target_compile_definitions(${PROJECT_NAME} PUBLIC ENGINE_PLATFORM_LINUX)
+endif()
+
 target_compile_definitions(${PROJECT_NAME}
     PUBLIC
         $<$<CONFIG:Debug>:ENGINE_BUILD_DEBUG>
@@ -22,11 +26,3 @@ target_compile_definitions(${PROJECT_NAME}
 if (MSVC)
     target_compile_options(${PROJECT_NAME} PUBLIC /Zc:preprocessor) # for __VA_OPT__() MSVC only
 endif()
-
-message(STATUS "C Compiler: ${CMAKE_C_COMPILER}")
-message(STATUS "C Compiler ID: ${CMAKE_C_COMPILER_ID}")
-message(STATUS "C Compiler Version: ${CMAKE_C_COMPILER_VERSION}")
-
-message(STATUS "CXX Compiler: ${CMAKE_CXX_COMPILER}")
-message(STATUS "CXX Compiler ID: ${CMAKE_CXX_COMPILER_ID}")
-message(STATUS "CXX Compiler Version: ${CMAKE_CXX_COMPILER_VERSION}")
