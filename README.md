@@ -140,3 +140,4 @@ Game (Executable / Client)
 ## TODOs
 
 - [ ] Add a CMake toggle for building the engine as either a Shared or Static library
+- [ ] Add Script to dynamically change project name and namespace name from user input/metadata
